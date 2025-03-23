@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datos del Cliente"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:background="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:id="@+id/etClientFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del Cliente"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/etClientLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellido del Cliente"
+        android:layout_below="@id/etClientFirstName"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etDNI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cédula del Cliente"
+        android:layout_below="@id/etClientLastName"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:maxLength="8"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:onClick="onBackClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:onClick="onNextClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp" />
+</RelativeLayout>

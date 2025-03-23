@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="product_code">Código: %s</string>
+    <string-array name="rif_types">
+        <item>V-</item>
+        <item>J-</item>
+        <item>E-</item>
+        <item>P-</item>
+        <item>G-</item>
+    </string-array>
+</resources>

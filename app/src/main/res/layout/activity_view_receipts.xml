@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Barra superior con el título -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de Recibos Emitidos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:background="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"/>
+
+    <!-- Lista de recibos -->
+    <ListView
+        android:id="@+id/lvReceipts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvTitle"
+        android:layout_above="@id/btnExit"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Botón de salir en la esquina inferior derecha -->
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:onClick="onExitClick"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

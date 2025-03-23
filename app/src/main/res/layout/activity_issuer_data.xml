@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datos del Emisor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:background="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:id="@+id/etIssuerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Razón Social del Emisor"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerRifType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etIssuerName"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:entries="@array/rif_types" />
+
+    <EditText
+        android:id="@+id/etRif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/spinnerRifType"
+        android:layout_alignBaseline="@id/spinnerRifType"
+        android:layout_marginStart="8dp"
+        android:hint="Número del RIF"
+        android:inputType="number"
+        android:maxLength="9" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atrás"
+        android:onClick="onBackClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:onClick="onNextClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp" />
+</RelativeLayout>
