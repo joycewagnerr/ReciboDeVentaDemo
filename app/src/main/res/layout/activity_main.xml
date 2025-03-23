@@ -2,54 +2,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
         android:id="@+id/tvIntro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¡Bienvenido!"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
         android:gravity="center"
-        android:layout_marginBottom="32dp" />
+        android:text="¡Bienvenido a la aplicacion!"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvIntroText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Demo Recibo de Venta"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
         android:gravity="center"
-        android:layout_marginBottom="32dp" />
+        android:text="Recibo de Venta Demo"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnCreateReceipt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nuevo Recibo"
-            android:onClick="onCreateReceiptClick"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             android:backgroundTint="@color/primaryColor"
+            android:onClick="onCreateReceiptClick"
+            android:text="Nuevo Recibo"
             android:textColor="@color/titleColor"
-            android:layout_marginEnd="16dp"
-            android:textSize="17sp"/>
+            android:textSize="17sp" />
 
         <Button
             android:id="@+id/btnViewReceipts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Consultar Recibos Emitidos"
-            android:onClick="onViewReceiptsClick"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
             android:backgroundTint="@color/primaryColor"
+            android:onClick="onViewReceiptsClick"
+            android:text="Consultar Lista de Recibos Emitidos"
             android:textColor="@color/titleColor"
             android:textSize="17sp" />
     </LinearLayout>

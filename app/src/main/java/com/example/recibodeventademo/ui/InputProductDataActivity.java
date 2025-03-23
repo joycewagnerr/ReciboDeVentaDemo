@@ -93,6 +93,11 @@ public class InputProductDataActivity extends AppCompatActivity {
             return;
         }
 
+        if (price > 1000000000) {
+            Toast.makeText(this, "El precio no puede ser mayor a 1,000,000,000", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Product exitingProduct = null;
         for (Product product : productList) {
             if (product.getCode().equals(code)) {
