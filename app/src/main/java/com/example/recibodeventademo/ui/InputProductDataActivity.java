@@ -111,8 +111,6 @@ public class InputProductDataActivity extends AppCompatActivity {
 
         recalculateSubtotal();
 
-        tvSubtotal.setText("Subtotal: $" + subtotal);
-
         productAdapter.notifyDataSetChanged();
 
         if (lvProductList.getVisibility() == View.GONE) {
@@ -131,7 +129,7 @@ public class InputProductDataActivity extends AppCompatActivity {
         for (Product product : productList) {
             subtotal += product.getSubtotal();
         }
-        tvSubtotal.setText("Subtotal: $" + subtotal);
+        tvSubtotal.setText("Subtotal: $" + String.format("%.2f", subtotal));
     }
 
     private void resetFields() {

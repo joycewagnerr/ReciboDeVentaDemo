@@ -12,8 +12,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="start"
-        android:background="?attr/colorPrimary"
-        android:textColor="@android:color/white"
+        android:background="@color/primaryColor"
+        android:textColor="@color/titleColor"
         android:padding="12dp"
         android:layout_alignParentTop="true" />
 
@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Descripción del Producto"
+        android:textColor="@color/textColor"
         android:layout_below="@id/etProductCode"
         android:layout_marginTop="16dp" />
 
@@ -39,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Precio del Producto"
+        android:textColor="@color/textColor"
         android:inputType="numberDecimal"
         android:layout_below="@id/etProductDescription"
         android:layout_marginTop="16dp" />
@@ -56,13 +58,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cantidad:"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/btnDecrement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-" />
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/titleColor"
+            android:text="-"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tvQuantity"
@@ -70,13 +78,18 @@
             android:layout_height="wrap_content"
             android:text="1"
             android:gravity="center"
+            android:textSize="16sp"
             android:layout_marginHorizontal="8dp" />
 
         <Button
             android:id="@+id/btnIncrement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+" />
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/titleColor"
+            android:text="+"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <Button
@@ -85,8 +98,11 @@
         android:layout_height="wrap_content"
         android:text="Agregar Producto"
         android:onClick="onAddProductClick"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@color/titleColor"
         android:layout_below="@id/quantityControls"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textSize="17sp"/>
 
     <ListView
         android:id="@+id/lvProductList"
@@ -103,7 +119,9 @@
         android:layout_height="wrap_content"
         android:text="Subtotal: $0.00"
         android:layout_above="@id/btnBack"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/btnBack"
@@ -111,9 +129,12 @@
         android:layout_height="wrap_content"
         android:text="Atrás"
         android:onClick="onBackClick"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@color/titleColor"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:textSize="17sp"/>
 
     <Button
         android:id="@+id/btnTotalize"
@@ -121,7 +142,10 @@
         android:layout_height="wrap_content"
         android:text="Totalizar"
         android:onClick="onTotalizeClick"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@color/titleColor"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:textSize="17sp"/>
 </RelativeLayout>

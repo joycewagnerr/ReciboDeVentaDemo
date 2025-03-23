@@ -109,6 +109,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:onClick="navigateToHome"
-            android:text="Finalizar" />
+            android:text="Finalizar"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/titleColor"
+            android:textSize="17sp" />
     </LinearLayout>
 </RelativeLayout>

@@ -36,8 +36,8 @@ public class ProductListAdapter extends ArrayAdapter<Product> {
         TextView tvProductDescription = convertView.findViewById(R.id.tvProductDescription);
 
         tvProductCode.setText("Código: " + product.getCode());
-        tvProductQuantityPrice.setText(product.getQuantity() + " x $" + product.getPrice());
-        tvProductSubtotal.setText("$" + (product.getQuantity() * product.getPrice()));
+        tvProductQuantityPrice.setText(product.getQuantity() + " x $" + String.format("%.2f", product.getPrice()));
+        tvProductSubtotal.setText("$" + String.format("%.2f", product.getQuantity() * product.getPrice()));
         tvProductDescription.setText(product.getDescription());
 
         return convertView;

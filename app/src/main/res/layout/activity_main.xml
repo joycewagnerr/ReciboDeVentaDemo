@@ -36,15 +36,21 @@
             android:id="@+id/btnCreateReceipt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Emitir Recibo"
+            android:text="Nuevo Recibo"
             android:onClick="onCreateReceiptClick"
-            android:layout_marginEnd="16dp" />
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/titleColor"
+            android:layout_marginEnd="16dp"
+            android:textSize="17sp"/>
 
         <Button
             android:id="@+id/btnViewReceipts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Consultar Recibos Emitidos"
-            android:onClick="onViewReceiptsClick" />
+            android:onClick="onViewReceiptsClick"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/titleColor"
+            android:textSize="17sp" />
     </LinearLayout>
 </LinearLayout>

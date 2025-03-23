@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Color principal para barras y botones -->
         <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
-        <item name="colorAccent">@color/accentColor</item>
+        <item name="colorPrimaryDark">@color/primaryColor</item>
+        <item name="colorAccent">@color/primaryColor</item>
+
+        <!-- Color del texto en barras y botones -->
+        <item name="android:textColorPrimary">@color/titleColor</item>
+
+        <!-- Color del texto general de la app -->
+        <item name="android:textColor">@color/textColor</item>
+
+        <!-- Estilo para los botones -->
+        <item name="android:buttonStyle">@style/CustomButtonStyle</item>
+    </style>
+
+    <!-- Estilo personalizado para botones -->
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/primaryColor</item>
+        <item name="android:textColor">@color/titleColor</item>
     </style>
 </resources>

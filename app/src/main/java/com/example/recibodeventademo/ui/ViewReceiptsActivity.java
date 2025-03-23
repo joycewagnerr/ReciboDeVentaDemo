@@ -47,7 +47,7 @@ public class ViewReceiptsActivity extends AppCompatActivity {
             String summary = "Cliente: " + receipt.getClient().getFullName() +
                     "\nEmisor: " + receipt.getIssuer().getName() +
                     "\nCantidad de ítems: " + totalItems +
-                    "\nMonto total: $" + receipt.getTotal();
+                    "\nMonto total: $" + String.format("%.2f", receipt.getTotal());
 
             receiptSummaries.add(summary);
         }

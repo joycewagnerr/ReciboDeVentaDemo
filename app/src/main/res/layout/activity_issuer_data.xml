@@ -12,8 +12,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="start"
-        android:background="?attr/colorPrimary"
-        android:textColor="@android:color/white"
+        android:background="@color/primaryColor"
+        android:textColor="@color/titleColor"
         android:padding="12dp"
         android:layout_alignParentTop="true" />
 
@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Razón Social del Emisor"
+        android:textColor="@color/textColor"
         android:layout_below="@id/tvTitle"
         android:layout_marginTop="20dp"/>
 
@@ -42,6 +43,7 @@
         android:layout_alignBaseline="@id/spinnerRifType"
         android:layout_marginStart="8dp"
         android:hint="Número del RIF"
+        android:textColor="@color/textColor"
         android:inputType="number"
         android:maxLength="9" />
 
@@ -51,9 +53,12 @@
         android:layout_height="wrap_content"
         android:text="Atrás"
         android:onClick="onBackClick"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@color/titleColor"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:textSize="17sp"/>
 
     <Button
         android:id="@+id/btnNext"
@@ -61,7 +66,10 @@
         android:layout_height="wrap_content"
         android:text="Siguiente"
         android:onClick="onNextClick"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@color/titleColor"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:textSize="17sp"/>
 </RelativeLayout>

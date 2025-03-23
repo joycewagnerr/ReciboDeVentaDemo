@@ -73,9 +73,9 @@ public class ReceiptActivity extends AppCompatActivity {
                 TextView tvProductSubtotal = productView.findViewById(R.id.tvProductSubtotal);
 
                 tvProductCode.setText("Código: " + product.getCode());
-                tvProductQuantityPrice.setText(quantity + " x $" + product.getPrice());
+                tvProductQuantityPrice.setText(quantity + " x $" + String.format("%.2f", product.getPrice()));
                 tvProductDescription.setText(product.getDescription());
-                tvProductSubtotal.setText("$" + (quantity * product.getPrice()));
+                tvProductSubtotal.setText("$" + String.format("%.2f", quantity * product.getPrice()));
 
                 productsContainer.addView(productView);
             } else {
@@ -83,7 +83,7 @@ public class ReceiptActivity extends AppCompatActivity {
             }
         }
 
-        tvTotal.setText("$" + receipt.getTotal());
+        tvTotal.setText("$" + String.format("%.2f", receipt.getTotal()));
     }
 
     private Product findProductByCode(String code, List<Product> productList) {
